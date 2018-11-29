@@ -29,7 +29,11 @@ Superfux = ['A','B','C','D','E','F','G','H','I','J',
 # array Keys
 array_keys = keys.split(',')
 
+# Open the password file
+file_password = open("passwords.txt", "w+");
 
+# Write in the password file
+# file_password.write()
 
 # Pause the console
 os.system("pause")
