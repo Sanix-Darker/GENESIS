@@ -15,7 +15,9 @@ print "# PYTHON-CAMEROUN                  #"
 print "####################################\n"
 
 # The link of the website
-keys = raw_input("\nEnter key words seperate by \",\" (Ex: manioc, patate):")
+# keys = raw_input("\nEnter key words seperate by \",\" (Ex: manioc, patate):")
+
+keys = "sdcds,sdc"
 # Superfux
 Superfux = ['A','B','C','D','E','F','G','H','I','J',
             'K','L','M','N','O','P','Q','R','S','T',
@@ -32,8 +34,13 @@ array_keys = keys.split(',')
 # Open the password file
 file_password = open("passwords.txt", "w+");
 
-# Write in the password file
-# file_password.write()
+# loop throught possibilities 
+for password in array_keys:
+    i = 0
+    while i < Superfux.count:
+        # Write in the password file
+        file_password.write(password+Superfux[i]+"\n")
+        i = i+1
 
 # Pause the console
 os.system("pause")
