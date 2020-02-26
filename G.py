@@ -10,15 +10,16 @@ from collections import Counter
 from datetime import datetime
 import os.path
 
-print "\n\t\t  ---------------------------------------"
-print "\t\t  |    ---> G E N E S I S v 1.0.0 <---  |"
-print "\t\t  ---------------------------------------"
-print "\t\t  |    By S4n1x D4rk3r                  |"
-print "\t\t  |    https://github.com/Sanix-Darker  |"
-print "\t\t  =======================================\n"
-print "\t>Description: Follow instructions to generate passwords from key Word of your target!\n"
 
-keywords=raw_input("Keywords about victim (Split with ','): ")
+print ("\n\t\t  ---------------------------------------")
+print ("\t\t  |    ---> G E N E S I S v 1.0.0 <---  |")
+print ("\t\t  ---------------------------------------")
+print ("\t\t  |    By S4n1x D4rk3r                  |")
+print ("\t\t  |    https://github.com/Sanix-Darker  |")
+print ("\t\t  =======================================\n")
+print ("\t>Description: Follow instructions to generate passwords from key Word of your target!\n")
+
+keywords=input("Keywords about victim (Split with ','): ")
 # keywords="hello,nous"
 words=keywords.split(",")
 length_words=len(words)
@@ -28,23 +29,23 @@ if(length_words<=0 or len(keywords.strip())<=0):
     exit()
 
 length_numbers=0
-numbers_entered=raw_input("Numbers about victim (Split with ','): ")
+numbers_entered = input("Numbers about victim (Split with ','): ")
 numbers=numbers_entered.split(",")
 length_numbers=len(numbers)
 
 length_pointings=0
-rule_pointings=raw_input("Words contain these punctuations (Split with blank. Ex: '. , _'): ")
+rule_pointings = input("Words contain these punctuations (Split with blank. Ex: '. , _'): ")
 pointings=rule_pointings.split(" ")
 length_pointings=len(pointings)
 
  
 character_limit=None
 try:
-    character_limit=int(raw_input("How many letters do words contain maximum? (Ex: 12): "))
+    character_limit=int(input("How many letters do words contain maximum? (Ex: 12): "))
 except ValueError:
     print("\n\tYou have to enter a number. Please, again!\n")
     try:
-        character_limit=int(raw_input("How many letters do words contain maximum? (Ex: 12): "))
+        character_limit=int(input("How many letters do words contain maximum? (Ex: 12): "))
     except ValueError:
         print("\n\tGoodbye!")
         exit()
@@ -102,7 +103,7 @@ def generate_word(words, min, max):
                                 add_numbers(mark+j[0],0) if length_numbers>0 else False
 
 
-                    if(length_pointings>0 and len(j)>1):
+                    if(length_pointings > 0 and len(j) > 1):
                         for mark in pointings:
                             if not mark.join(j) in words_lists[counter_for_join_word-1]:
                                 words_lists[counter_for_join_word-1].append(mark.join(j))
