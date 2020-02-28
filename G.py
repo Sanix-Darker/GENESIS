@@ -11,18 +11,18 @@ from datetime import datetime
 import os.path
 
 
-print ("\n\t\t  ---------------------------------------")
-print ("\t\t  |    ---> G E N E S I S v 1.0.0 <---  |")
-print ("\t\t  ---------------------------------------")
-print ("\t\t  |    By S4n1x D4rk3r                  |")
-print ("\t\t  |    https://github.com/Sanix-Darker  |")
-print ("\t\t  =======================================\n")
-print ("\t>Description: Follow instructions to generate passwords from key Word of your target!\n")
+print ("\n  ---------------------------------------")
+print ("  |    ---> G E N E S I S v 1.0.0 <---  |")
+print ("  ---------------------------------------")
+print ("  |    By S4n1x D4rk3r                  |")
+print ("  |    https://github.com/Sanix-Darker  |")
+print ("  =======================================\n")
+print (">Description: Follow instructions to generate passwords from key Word of your target!\n")
 
-keywords=input("Keywords about victim (Split with ','): ")
+keywords = input("Keywords about victim (Split with ','): ")
 # keywords="hello,nous"
 words=keywords.split(",")
-length_words=len(words)
+length_words = len(words)
 
 if(length_words<=0 or len(keywords.strip())<=0):
     print("\n\tSorry, you have to enter at least one word. GOODBYE!\n")
